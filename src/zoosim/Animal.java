@@ -5,7 +5,7 @@
 package zoosim;
 import java.lang.Math;
 /**
- *
+ * Representing Animal 
  * @author Daniel Zhong
  */
 public abstract class Animal implements IEntity {
