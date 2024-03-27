@@ -13,6 +13,7 @@ package zoosim;
  */
 public class BirdAnimal extends Animal implements IFlyable {
     private boolean canFly;
+    private boolean isFlying;
     
     /**
      * Constructs a BirdAnimal with the specified attributes.
@@ -39,8 +40,12 @@ public class BirdAnimal extends Animal implements IFlyable {
      */
     @Override
     public void fly() {
-        canFly = true;
-        System.out.println(super.getFullName() + " is in the air.");
+        if(canFly){
+            isFlying = true;
+            System.out.println(super.getFullName() + " is in the air.");
+        }else{
+            System.out.println(super.getFullName() + " cannot fly.");
+        }
     }
 
     /**
@@ -49,7 +54,7 @@ public class BirdAnimal extends Animal implements IFlyable {
      */
     @Override
     public void land() {
-        canFly = false;
+        isFlying = false;
         System.out.println(super.getFullName() + " has landed on the ground");
     }
 
@@ -60,7 +65,7 @@ public class BirdAnimal extends Animal implements IFlyable {
      */
     @Override
     public boolean isFlying() {
-        return canFly;
+        return isFlying;
     }
 }
 

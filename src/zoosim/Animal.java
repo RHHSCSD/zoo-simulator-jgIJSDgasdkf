@@ -377,6 +377,8 @@ public abstract class Animal implements IEntity {
                 ", sex=" + sex +
                 ", age=" + age +
                 ", position=" + position[0]+ ","+ position[1] +
+                ", hunger=" + hunger +
+                ", fatigue=" + fatigue+
                 '}';
     }
     

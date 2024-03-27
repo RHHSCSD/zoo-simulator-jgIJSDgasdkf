@@ -30,7 +30,13 @@ public class ZooSim {
         blueJay.turn(90);
         blueJay.move();
         System.out.println(blueJay.getPosition());
+        
+        LandAnimal justin = new LandAnimal(2,"Justin","Dog","M",5, new double[]{0,0}, 20, 5, 0.0);
+        
+        zoo.addAnimal(justin);
         zoo.displayStatistics();
+        justin.move();
+        System.out.println(justin.toString());
     }
     
 }
